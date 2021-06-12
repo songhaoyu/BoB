@@ -88,10 +88,10 @@ we take the English PersonaChat dataset as an example to illustrate how to run t
 	
 	```
 	persona:i'm terrified of scorpions. i am employed by the us postal service. i've a german shepherd named barnaby. my father drove a car for nascar.
-query:sorry to hear that. my dad is an army soldier.
-gold:i thank him for his service.
-response_from_d1:that's cool. i'm a train driver.
-response_from_d2:that's cool. i'm a bit of a canadian who works for america.  
+	query:sorry to hear that. my dad is an army soldier.
+	gold:i thank him for his service.
+	response_from_d1:that's cool. i'm a train driver.
+	response_from_d2:that's cool. i'm a bit of a canadian who works for america.  
 	```
 	where `d1` and `d2` are the two BERT decoders, respectively.
 	
