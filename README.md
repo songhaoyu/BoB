@@ -102,6 +102,8 @@ we take the English PersonaChat dataset as an example to illustrate how to run t
 
 
 ## MISC
+* Build upon 🤗 [Transformers](https://huggingface.co/transformers/).
+
 * Bibtex:
 
 	<pre>
