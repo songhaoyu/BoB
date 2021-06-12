@@ -31,7 +31,8 @@ In this work, we carried out persona-based dialogue generation experiments under
 	
 * **Download Pre-trained BERT**
 
- The BoB model is initialized from public BERT checkpoints:
+	The BoB model is initialized from public BERT checkpoints:
+ 
 	* **English BERT**: [https://huggingface.co/bert-base-uncased/tree/main](https://huggingface.co/bert-base-uncased/tree/main)
 	* **Chinese BERT**: [https://huggingface.co/bert-base-chinese/tree/main](https://huggingface.co/bert-base-chinese/tree/main)
 
