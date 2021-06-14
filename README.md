@@ -5,7 +5,7 @@
 
 This repository provides the implementation details for the ACL 2021 main conference paper:
 
-**BoB: BERT Over BERT for Training Persona-based Dialogue Models from Limited Personalized Data**. [paper on the way]
+**BoB: BERT Over BERT for Training Persona-based Dialogue Models from Limited Personalized Data**. [[paper]](https://arxiv.org/pdf/2106.06169.pdf)
 
 
 ## 1. Data Preparation
