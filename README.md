@@ -108,7 +108,7 @@ we take the English PersonaChat dataset as an example to illustrate how to run t
 
 	<pre>
 	@inproceedings{song-etal-2021-bob,
-	    title = "Profile Consistency Identification for Open-domain Dialogue Agents",
+	    title = "BoB: BERT Over BERT for Training Persona-based Dialogue Models from Limited Personalized Data",
 	    author = "Haoyu Song, Yan Wang, Kaiyan Zhang, Wei-Nan Zhang, Ting Liu",
 	    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics (ACL-2021)",
 	    month = "Aug",
