@@ -42,23 +42,23 @@ from .tokenization_utils_base import PaddingStrategy
 from .utils import logging
 
 
-if is_tf_available():
-    import tensorflow as tf
-
-    from .modeling_tf_auto import (
-        TF_MODEL_FOR_QUESTION_ANSWERING_MAPPING,
-        TF_MODEL_FOR_SEQ_TO_SEQ_CAUSAL_LM_MAPPING,
-        TF_MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING,
-        TF_MODEL_FOR_TOKEN_CLASSIFICATION_MAPPING,
-        TF_MODEL_WITH_LM_HEAD_MAPPING,
-        TFAutoModel,
-        TFAutoModelForCausalLM,
-        TFAutoModelForMaskedLM,
-        TFAutoModelForQuestionAnswering,
-        TFAutoModelForSeq2SeqLM,
-        TFAutoModelForSequenceClassification,
-        TFAutoModelForTokenClassification,
-    )
+# if is_tf_available():
+#     import tensorflow as tf
+#
+#     from .modeling_tf_auto import (
+#         TF_MODEL_FOR_QUESTION_ANSWERING_MAPPING,
+#         TF_MODEL_FOR_SEQ_TO_SEQ_CAUSAL_LM_MAPPING,
+#         TF_MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING,
+#         TF_MODEL_FOR_TOKEN_CLASSIFICATION_MAPPING,
+#         TF_MODEL_WITH_LM_HEAD_MAPPING,
+#         TFAutoModel,
+#         TFAutoModelForCausalLM,
+#         TFAutoModelForMaskedLM,
+#         TFAutoModelForQuestionAnswering,
+#         TFAutoModelForSeq2SeqLM,
+#         TFAutoModelForSequenceClassification,
+#         TFAutoModelForTokenClassification,
+#     )
 
 if is_torch_available():
     import torch
@@ -2598,13 +2598,13 @@ class ConversationalPipeline(Pipeline):
 SUPPORTED_TASKS = {
     "feature-extraction": {
         "impl": FeatureExtractionPipeline,
-        "tf": TFAutoModel if is_tf_available() else None,
+        # "tf": TFAutoModel if is_tf_available() else None,
         "pt": AutoModel if is_torch_available() else None,
         "default": {"model": {"pt": "distilbert-base-cased", "tf": "distilbert-base-cased"}},
     },
     "sentiment-analysis": {
         "impl": TextClassificationPipeline,
-        "tf": TFAutoModelForSequenceClassification if is_tf_available() else None,
+        # "tf": TFAutoModelForSequenceClassification if is_tf_available() else None,
         "pt": AutoModelForSequenceClassification if is_torch_available() else None,
         "default": {
             "model": {
@@ -2615,7 +2615,7 @@ SUPPORTED_TASKS = {
     },
     "ner": {
         "impl": TokenClassificationPipeline,
-        "tf": TFAutoModelForTokenClassification if is_tf_available() else None,
+        # "tf": TFAutoModelForTokenClassification if is_tf_available() else None,
         "pt": AutoModelForTokenClassification if is_torch_available() else None,
         "default": {
             "model": {
@@ -2626,7 +2626,7 @@ SUPPORTED_TASKS = {
     },
     "question-answering": {
         "impl": QuestionAnsweringPipeline,
-        "tf": TFAutoModelForQuestionAnswering if is_tf_available() else None,
+        # "tf": TFAutoModelForQuestionAnswering if is_tf_available() else None,
         "pt": AutoModelForQuestionAnswering if is_torch_available() else None,
         "default": {
             "model": {"pt": "distilbert-base-cased-distilled-squad", "tf": "distilbert-base-cased-distilled-squad"},
@@ -2634,20 +2634,20 @@ SUPPORTED_TASKS = {
     },
     "fill-mask": {
         "impl": FillMaskPipeline,
-        "tf": TFAutoModelForMaskedLM if is_tf_available() else None,
+        # "tf": TFAutoModelForMaskedLM if is_tf_available() else None,
         "pt": AutoModelForMaskedLM if is_torch_available() else None,
         "default": {"model": {"pt": "distilroberta-base", "tf": "distilroberta-base"}},
     },
     "summarization": {
         "impl": SummarizationPipeline,
-        "tf": TFAutoModelForSeq2SeqLM if is_tf_available() else None,
+        # "tf": TFAutoModelForSeq2SeqLM if is_tf_available() else None,
         "pt": AutoModelForSeq2SeqLM if is_torch_available() else None,
         "default": {"model": {"pt": "sshleifer/distilbart-cnn-12-6", "tf": "t5-small"}},
     },
     # This task is a special case as it's parametrized by SRC, TGT languages.
     "translation": {
         "impl": TranslationPipeline,
-        "tf": TFAutoModelForSeq2SeqLM if is_tf_available() else None,
+        # "tf": TFAutoModelForSeq2SeqLM if is_tf_available() else None,
         "pt": AutoModelForSeq2SeqLM if is_torch_available() else None,
         "default": {
             ("en", "fr"): {"model": {"pt": "t5-base", "tf": "t5-base"}},
@@ -2657,19 +2657,19 @@ SUPPORTED_TASKS = {
     },
     "text2text-generation": {
         "impl": Text2TextGenerationPipeline,
-        "tf": TFAutoModelForSeq2SeqLM if is_tf_available() else None,
+        # "tf": TFAutoModelForSeq2SeqLM if is_tf_available() else None,
         "pt": AutoModelForSeq2SeqLM if is_torch_available() else None,
         "default": {"model": {"pt": "t5-base", "tf": "t5-base"}},
     },
     "text-generation": {
         "impl": TextGenerationPipeline,
-        "tf": TFAutoModelForCausalLM if is_tf_available() else None,
+        # "tf": TFAutoModelForCausalLM if is_tf_available() else None,
         "pt": AutoModelForCausalLM if is_torch_available() else None,
         "default": {"model": {"pt": "gpt2", "tf": "gpt2"}},
     },
     "zero-shot-classification": {
         "impl": ZeroShotClassificationPipeline,
-        "tf": TFAutoModelForSequenceClassification if is_tf_available() else None,
+        # "tf": TFAutoModelForSequenceClassification if is_tf_available() else None,
         "pt": AutoModelForSequenceClassification if is_torch_available() else None,
         "default": {
             "model": {"pt": "facebook/bart-large-mnli", "tf": "roberta-large-mnli"},
@@ -2679,7 +2679,7 @@ SUPPORTED_TASKS = {
     },
     "conversational": {
         "impl": ConversationalPipeline,
-        "tf": TFAutoModelForCausalLM if is_tf_available() else None,
+        # "tf": TFAutoModelForCausalLM if is_tf_available() else None,
         "pt": AutoModelForCausalLM if is_torch_available() else None,
         "default": {"model": {"pt": "microsoft/DialoGPT-medium", "tf": "microsoft/DialoGPT-medium"}},
     },
