@@ -108,13 +108,13 @@ we take the English PersonaChat dataset as an example to illustrate how to run t
 
 	<pre>
 	@inproceedings{song-etal-2021-bob,
-	    title = "BoB: BERT Over BERT for Training Persona-based Dialogue Models from Limited Personalized Data",
-	    author = "Haoyu Song, Yan Wang, Kaiyan Zhang, Wei-Nan Zhang, Ting Liu",
-	    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics (ACL-2021)",
-	    month = "Aug",
-	    year = "2021",
-	    address = "Online",
-	    publisher = "Association for Computational Linguistics",
+	      title = {BoB: BERT Over BERT for Training Persona-based Dialogue Models from Limited Personalized Data},
+	      author = {Haoyu Song and Yan Wang and Kaiyan Zhang and Wei-Nan Zhang and Ting Liu},
+	      booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics (ACL-2021)},
+	      month = {Aug},
+	      year = {2021},
+	      address = {Online},
+	      publisher = {Association for Computational Linguistics},
 	}
 	</pre>
 
