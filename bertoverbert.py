@@ -609,7 +609,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_source_length", type=int, default=128)
     parser.add_argument("--max_target_length", type=int, default=32)
 
-    parser.add_argument("--total_epochs", type=int, default=10)
+    parser.add_argument("--total_epochs", type=int, default=20)
     parser.add_argument("--eval_epoch", type=int, default=7)
     parser.add_argument("--print_frequency", type=int, default=-1)
     parser.add_argument("--warm_up_steps", type=int, default=6000)
