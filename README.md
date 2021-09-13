@@ -35,6 +35,13 @@ In this work, we carried out persona-based dialogue generation experiments under
  
 	* **English BERT**: [https://huggingface.co/bert-base-uncased/tree/main](https://huggingface.co/bert-base-uncased/tree/main)
 	* **Chinese BERT**: [https://huggingface.co/bert-base-chinese/tree/main](https://huggingface.co/bert-base-chinese/tree/main)
+	
+	using Git LFS to implement Git support for large files, so you can download the pretrained model from huggingface.co easily:
+	```bash
+	sudo apt-get install git-lfs
+	git lfs install
+	git clone https://huggingface.co/bert-base-uncased
+	```
 
 ## 2. How to Run
 
