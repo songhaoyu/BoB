@@ -14,7 +14,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
+import os
 import json
 
 from argparse import ArgumentParser
@@ -170,7 +170,10 @@ def preprocess(args):
         path = './data/ConvAI2/convai2_tokenized/' if not args.roberta else './data/ConvAI2/convai2_roberta_tokenized/'
     else:
         path = './data/ECDT2019/ecdt2019_tokenized/'
-    
+    if not os.path.exists(path):
+        # for the FileNotFoundError: [Errno 2] No such file or directory: './data/ECDT2019/ecdt2019_tokenized/train_persona.json',
+        # when first running this code.
+        os.makedirs(path)
     print(f"Saving tokenized dict at {path}")
     
     with open(path+'train_persona.json','w') as train_persona:
